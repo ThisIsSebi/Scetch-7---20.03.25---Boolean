@@ -15,20 +15,30 @@ function draw() {
   stroke(255);
   strokeWeight(4);
   fill(0,0,255);
-  if(mouseX > 250 && mouseX < 350 && mouseY > 150 && mouseY < 250){
-    fill(255,0,200)
-  }
+  // if(mouseX > 250 && mouseX < 350 && mouseY > 150 && mouseY < 250){
+  //   fill(255,0,200)
+  // }
   rectMode(CENTER)
   rect(x,200,100,100, 50)
+  console.log(mouseX)
 }
 
 function mousePressed(){
   if(mouseX > 250 && mouseX < 350 && mouseY > 150 && mouseY < 250){
-    if(on == true){
-       on = false;
-       } else{
-         on = true;
-       }  }
+  //   if(on == true){
+  //      on = false;
+  //      } else{
+  //        on = true;
+  //      } 
+  //      console.log(x)
+  //  }
+  }
+  if(mouseX > 300){
+    x = 400;
+  } else if(mouseX < 300){
+   x = 300;
+  }
+
 }
 
 // function mousePressed(){
