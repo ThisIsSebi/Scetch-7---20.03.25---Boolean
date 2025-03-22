@@ -1,14 +1,21 @@
 var on = false;
 var x = 300;
+var y = 200;
 
 function setup() {
   createCanvas(600, 400);
 
-  let buttonRight = createButton('right');
-  buttonRight.mousePressed(turnRight);
-
   let buttonLeft = createButton('left');
   buttonLeft.mousePressed(turnLeft);
+
+  let buttonTop = createButton('top');
+  buttonTop.mousePressed(turnUp);
+
+  let buttonDown = createButton('down');
+  buttonDown.mousePressed(turnDown);
+
+  let buttonRight = createButton('right');
+  buttonRight.mousePressed(turnRight);
 }
 
 function draw() {
@@ -25,7 +32,7 @@ function draw() {
   //   fill(255,0,200)
   // }
   rectMode(CENTER)
-  rect(x,200,100,100, 50)
+  rect(x,y,100,100, 50)
   console.log(mouseX)
 }
 
@@ -35,6 +42,14 @@ function turnRight(){
 
 function turnLeft(){
   x -= 100;
+}
+
+function turnUp(){
+  y -= 100;
+}
+
+function turnDown(){
+  y += 100;
 }
 
 // function mousePressed(){
