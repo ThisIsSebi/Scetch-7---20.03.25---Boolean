@@ -3,6 +3,12 @@ var x = 300;
 
 function setup() {
   createCanvas(600, 400);
+
+  let buttonRight = createButton('right');
+  buttonRight.mousePressed(turnRight);
+
+  let buttonLeft = createButton('left');
+  buttonLeft.mousePressed(turnLeft);
 }
 
 function draw() {
@@ -23,23 +29,31 @@ function draw() {
   console.log(mouseX)
 }
 
-function mousePressed(){
-  if(mouseX > 250 && mouseX < 350 && mouseY > 150 && mouseY < 250){
-  //   if(on == true){
-  //      on = false;
-  //      } else{
-  //        on = true;
-  //      } 
-  //      console.log(x)
-  //  }
-  }
-  if(mouseX > 300){
-    x = 400;
-  } else if(mouseX < 300){
-   x = 300;
-  }
-
+function turnRight(){
+  x += 100;
 }
+
+function turnLeft(){
+  x -= 100;
+}
+
+// function mousePressed(){
+//   if(mouseX > 250 && mouseX < 350 && mouseY > 150 && mouseY < 250){
+//   //   if(on == true){
+//   //      on = false;
+//   //      } else{
+//   //        on = true;
+//   //      } 
+//   //      console.log(x)
+//   //  }
+//   }
+//   if(mouseX > 300){
+//     x = 400;
+//   } else if(mouseX < 300){
+//    x = 300;
+//   }
+
+// }
 
 // function mousePressed(){
 //   if(mouseX > 350 && mouseX < 450 && mouseY > 150 && mouseY < 250){
