@@ -16,7 +16,21 @@ function setup() {
 
   let buttonRight = createButton("right");
   buttonRight.mousePressed(turnRight);
+}
 
+function keyPressed(){
+  if(keyCode === UP_ARROW){
+    y = y - 100;
+  }
+  if(keyCode === DOWN_ARROW){
+    y = y + 100;
+  }
+  if(keyCode === LEFT_ARROW){
+    x = x - 100;
+  }
+  if(keyCode === RIGHT_ARROW){
+    x = x + 100;
+  }
 }
 
 function draw() {
